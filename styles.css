@@ -1,0 +1,128 @@
+/* CSS Document */
+
+body
+	{	
+		margin: 0px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;	
+		font-size: 20px;
+		min-width: 520px; /* This stops the problem you have where horizontal scrolling does not redraw the page*/ 
+							/*Used to have this at 700 but 520 and lower seems to make it work better with mobile phones, also this low on relevant media only screen*/
+	}
+
+#canvas
+{
+	margin:0 auto;
+	position:relative;
+	width: 100%;			
+	font-family: Tahoma, Arial, Helvetica, sans-serif;	
+}
+
+	#title_wrapper { width: 100%; padding-top: 50px; }	
+	
+		#title_slider_wrapper { margin: 0 auto; position: relative;	max-width: 1600px; overflow: auto;}	 /*Use "overflow: auto;" so that the div will automatically adjust its height*/
+					
+
+	#nav_wrapper { width: 100%; background-color: #343738; }
+	
+		#nav_bar_slider_wrapper { margin: 0 auto; position: relative; text-align: center; overflow: auto;} /*Use "text-align: center;" in combination with "display: inline-block;" below"*/
+		
+			#nav_page_1 { display: inline-block;} /*Using "display: inline-block;" here instead of float left seems to allow the nav divs to be properly centered*/
+			
+			#nav_page_2 { padding-left: 100px; display: inline-block;}
+			
+	
+	#middle_wrapper { width: 100%; padding-top: 50px;}
+	
+		#middle_slider_wrapper { margin: 0 auto; position: relative; max-width: 1600px; overflow: auto; }
+		
+			#middle_left {float: left; width:800px;}
+			
+			#middle_right {float: left; width:800px; }
+
+a.nav:link {color:white; font-size: 20px; line-height: 50px; text-decoration: none;}
+a.nav:visited {color:white; font-size: 20px; line-height: 50px; text-decoration: none;}
+
+img.image_max { display: inline; } 			
+img.image_1440 { display: none; } 
+img.image_1280 { display: none; } 
+img.image_1120 { display: none; } 
+img.image_960 { display: none; } 
+img.image_800 { display: none; } 
+
+
+/*----------------------------------------------------------------------MAX (1600+) END----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1617px) /* This is 1617 because the width of the vertical scroll bar adds 17 pixels */
+{
+	
+}
+/*----------------------------------------------------------------------1440 - 1600 END----------------------------------------------------------------------*/		
+
+@media only screen and (max-width: 1457px) 
+{
+
+}	
+
+/*----------------------------------------------------------------------1280 - 1440 END----------------------------------------------------------------------*/		
+
+@media only screen and (max-width: 1297px) 
+{
+
+}	
+
+/*----------------------------------------------------------------------1120 - 1280 END----------------------------------------------------------------------*/	
+
+@media only screen and (max-width: 1137px) 
+{
+
+}
+
+/*----------------------------------------------------------------------960 - 1120 END----------------------------------------------------------------------*/		
+
+@media only screen and (max-width: 977px) and (orientation: landscape) 
+{
+	
+}	
+
+/*----------------------------------------------------------------------800 - 960 landscape END----------------------------------------------------------------------*/	
+
+@media only screen and (max-width: 977px) and (orientation: portrait) 
+{
+
+#title_wrapper { width: 100%; padding-top: 50px; }	
+	
+		#title_slider_wrapper { margin: 0 ; position: relative;	max-width: 420px; padding-left: 50px; overflow: auto; }	/* Remove auto from margin */	
+		
+			#title_left { float: none; width: 520px;  }		/* Often set float to none */	
+			
+			#title_right { float: none; width: 520px;  }					
+			
+#nav_wrapper { width: 100%;  background-color: #343738; display: block;}
+	
+		#nav_bar_slider_wrapper { margin: 0; position: relative; text-align: left; padding-left: 50px; } 
+		
+			#nav_page_1 { display: block;}
+			
+			#nav_page_2 { display: block;}						
+
+#middle_wrapper { width: 100%; padding-top: 50px;}
+	
+		#middle_slider_wrapper { margin: 0 auto; position: relative; max-width: 520px; overflow: auto; }
+		
+			#middle_left {float: none; width:520px;}
+			
+			#middle_right {float: none; width:520px; }	
+
+a.white_nav:link {color:white; font-size: 20px; line-height: 50px; text-decoration: none;}
+a.white_nav:visited {color:white; font-size: 20px; line-height: 50px; text-decoration: none;}
+
+img.image_max { display: inline; } 			
+img.image_1440 { display: none; } 
+img.image_1280 { display: none; } 
+img.image_1120 { display: none; } 
+img.image_960 { display: none; } 
+img.image_800 { display: none; }
+	
+}	
+
+/*----------------------------------------------------------------------800 - 960 portrait END----------------------------------------------------------------------*/	
